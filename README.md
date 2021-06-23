@@ -13,7 +13,12 @@ A backbone for your coding challenge.
 
 ### Backend
 
-TBD
+- NestJS 7.6.15
+- Typescript 4.2.3
+
+#### Additional libs
+
+- Jest (testing)
 
 ### Frontend
 
@@ -22,7 +27,6 @@ TBD
 
 #### Additional libs
 
-- @nuxtjs/tailwindcss (CSS)
 - Karma (testing)
 
 ### Misc
@@ -34,10 +38,11 @@ TBD
 
 1. Make sure npm & node are configured on your local env. You can download those distributions for your platform [here](https://nodejs.org/en/download/)
 
-2. Install `ng`:
+2. Install `ng` & `nest`:
 
 ```
 npm install -g @angular/cli
+npm i -g @nestjs/cli
 ```
 
 3. Build your app.
