@@ -38,14 +38,7 @@ A backbone for your coding challenge.
 
 1. Make sure npm & node are configured on your local env. You can download those distributions for your platform [here](https://nodejs.org/en/download/)
 
-2. Install `ng` & `nest`:
-
-```
-npm install -g @angular/cli
-npm i -g @nestjs/cli
-```
-
-3. Build your app.
+2. Build your app.
 
 ```bash
 npm install
@@ -54,7 +47,7 @@ npm run build:backend # only backend
 npm run build:frontend # only frontend
 ```
 
-4. Start your app.
+3. Start your app.
 
 ```bash
 npm install
@@ -63,7 +56,7 @@ npm run start:backend # only backend
 npm run start:frontend # only frontend
 ```
 
-5. Run the Cypress tests.
+4. Run the Cypress tests.
 
 ```bash
 npm run test # run project tests under `cypress/integration`
