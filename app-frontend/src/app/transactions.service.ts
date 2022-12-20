@@ -20,7 +20,21 @@ export class TransactionsService {
     this.httpClient = httpClient;
   }
 
-  getAllTransactions() {}
+  // Fetching all transactions
+  getAllTransactions() {
+    this.httpClient
+      .get<Array<object>>(environment.TRANSACTION_API)
+      .subscribe((data) => {
+        data.forEach(async (obj) => {
+          const balance = await this.fetchBalance(Object.values(obj)[1]);
+          this.addTransaction(
+            Object.values(obj)[1],
+            Object.values(obj)[2],
+            balance!
+          );
+        });
+      });
+  }
 
   // Posting new transaction
   postTransaction(account_id: number, amount: number) {

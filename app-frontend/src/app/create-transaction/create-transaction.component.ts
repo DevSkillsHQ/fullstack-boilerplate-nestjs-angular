@@ -9,7 +9,7 @@ import { TransactionsService } from '../transactions.service';
 })
 export class CreateTransactionComponent {
   tService: TransactionsService;
-
+  balance: number = 0;
   constructor(tService: TransactionsService) {
     this.tService = tService;
   }
