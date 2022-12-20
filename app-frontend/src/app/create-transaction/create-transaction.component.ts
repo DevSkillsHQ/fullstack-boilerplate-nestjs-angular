@@ -23,7 +23,14 @@ export class CreateTransactionComponent {
     }
     return true;
   }
-  onSubmit(form: NgForm) {
+  async onSubmit(form: NgForm) {
+    this.tService.postTransaction(form.value.account_id, form.value.amount);
+    const balance = await this.tService.fetchBalance(form.value.account_id);
+    this.tService.addTransaction(
+      form.value.account_id,
+      form.value.amount,
+      balance!
+    );
     form.reset();
   }
 }
