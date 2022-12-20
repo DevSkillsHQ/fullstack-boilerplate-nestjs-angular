@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class TabsComponent {
   transactions: Array<object> | undefined;
+  getTransactionsWithdraw() {}
+  getTransactions() {}
+  ngOnInit(): void {}
 }
