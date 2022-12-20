@@ -1,1 +1,38 @@
-<p>create-transaction works!</p>
+<div>
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" style="cursor: pointer"
+        >Submit new transaction</a
+      >
+    </li>
+  </ul>
+  <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+    <div class="form-group">
+      <label for="account_id">Account ID:</label>
+      <input
+        (keypress)="allowOnlyNumbersAndMinus($event)"
+        type="text"
+        id="account_id"
+        name="account_id"
+        class="form-control"
+        ngModel
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="amount">Amount:</label>
+      <input
+        (keypress)="allowOnlyNumbersAndMinus($event)"
+        type="text"
+        id="amount"
+        name="amount"
+        class="form-control"
+        ngModel
+        required
+      />
+    </div>
+    <button class="btn btn-primary" type="submit" [disabled]="form.invalid">
+      Submit
+    </button>
+  </form>
+</div>
