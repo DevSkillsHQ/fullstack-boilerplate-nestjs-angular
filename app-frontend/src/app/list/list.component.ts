@@ -13,5 +13,7 @@ export class ListComponent {
   constructor(tService: TransactionsService) {
     this.tService = tService;
   }
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.tService.getAllTransactions();
+  }
 }
