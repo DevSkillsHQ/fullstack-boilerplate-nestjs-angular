@@ -22,8 +22,21 @@ export class TransactionsService {
 
   getAllTransactions() {}
   postTransaction(account_id: number, amount: number) {}
-  fetchBalance(account_id: string) {}
-  getValue() {}
+  async fetchBalance(account_id: string): Promise<number | undefined> {
+    try {
+      const response = await this.httpClient
+        .get<object>(`${environment.GET_BALANCE_API}${account_id}`)
+        .toPromise();
+      const balance = this.getValue({ ...response })('balance');
+      return balance;
+    } catch (error) {
+      // handle error
+      return 0;
+    }
+  }
+  getValue(obj: { [key: string]: number }) {
+    return (key: string): number => obj[key];
+  }
   // Filtering the type of the transaction
   getTransactions() {
     return this.transactions.filter((trans) => {
