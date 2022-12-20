@@ -9,6 +9,7 @@ import { ItemComponent } from './item/item.component';
 import { CreateTransactionComponent } from './create-transaction/create-transaction.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
+import { TransactionsService } from './transactions.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { FormsModule } from '@angular/forms';
     CreateTransactionComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
-  providers: [],
+  providers: [TransactionsService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
