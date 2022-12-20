@@ -21,7 +21,17 @@ export class TransactionsService {
   }
 
   getAllTransactions() {}
-  postTransaction(account_id: number, amount: number) {}
+
+  // Posting new transaction
+  postTransaction(account_id: number, amount: number) {
+    this.httpClient
+      .post(environment.TRANSACTION_API, { account_id, amount })
+      .subscribe((data) => {
+        console.log(data);
+      });
+  }
+
+  // Fetching the balance
   async fetchBalance(account_id: string): Promise<number | undefined> {
     try {
       const response = await this.httpClient
