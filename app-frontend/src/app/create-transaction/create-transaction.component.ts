@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { TransactionsService } from '../transactions.service';
 
 @Component({
   selector: 'app-create-transaction',
@@ -7,6 +8,12 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./create-transaction.component.css'],
 })
 export class CreateTransactionComponent {
+  tService: TransactionsService;
+
+  constructor(tService: TransactionsService) {
+    this.tService = tService;
+  }
+
   allowOnlyNumbersAndMinus(event: KeyboardEvent): boolean {
     console.log(event);
 

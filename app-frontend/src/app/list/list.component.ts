@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { TransactionsService } from '../transactions.service';
 
 @Component({
   selector: 'app-list',
@@ -7,6 +8,10 @@ import { Component, Input } from '@angular/core';
 })
 export class ListComponent {
   @Input() transactions: any;
-  constructor() {}
+  tService: TransactionsService;
+
+  constructor(tService: TransactionsService) {
+    this.tService = tService;
+  }
   ngOnInit(): void {}
 }
