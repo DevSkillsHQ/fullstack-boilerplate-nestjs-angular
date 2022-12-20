@@ -8,10 +8,17 @@ import { TransactionsService } from '../transactions.service';
 export class TabsComponent {
   transactions: Array<object> | undefined;
   tService: TransactionsService;
+
   constructor(tService: TransactionsService) {
     this.tService = tService;
   }
-  getTransactionsWithdraw() {}
-  getTransactions() {}
+  getTransactionsWithdraw() {
+    this.transactions = this.tService.getTransactionsWithdraw();
+    return this.transactions;
+  }
+  getTransactions() {
+    this.transactions = this.tService.getTransactions();
+    return this.transactions;
+  }
   ngOnInit(): void {}
 }
