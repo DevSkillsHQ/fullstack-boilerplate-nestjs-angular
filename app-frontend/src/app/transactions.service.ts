@@ -58,5 +58,14 @@ export class TransactionsService {
       return trans['amount'] < 0;
     });
   }
-  addTransaction(account_id: number, amount: number, balance: number) {}
+
+  // Adding the new transaction on the top of the list
+  addTransaction(account_id: number, amount: number, balance: number) {
+    const newTrans = {
+      account_id: account_id,
+      amount: amount,
+      balance: balance,
+    };
+    this.transactions.splice(0, 0, newTrans);
+  }
 }
