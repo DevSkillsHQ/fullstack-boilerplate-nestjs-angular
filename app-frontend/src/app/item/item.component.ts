@@ -7,4 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 export class ItemComponent {
   @Input() transaction: any;
+
+  constructor() {}
+
+  ngOnInit(): void {}
 }
