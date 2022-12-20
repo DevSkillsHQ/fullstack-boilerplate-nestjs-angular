@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { HttpClient } from '@angular/common/http';
+
 @Injectable()
 export class TransactionsService {
   transactions = [
@@ -8,10 +10,16 @@ export class TransactionsService {
     { account_id: 121236123, amount: -7345, balance: 23100 },
   ];
   allTransactions = [];
+  httpClient: HttpClient;
   myData = {
     account_id: '0afd02d3-6c59-46e7-b7bc-893c5e0b7ac2',
     amount: 7,
   };
+
+  constructor(httpClient: HttpClient) {
+    this.httpClient = httpClient;
+  }
+
   getAllTransactions() {}
   postTransaction(account_id: number, amount: number) {}
   fetchBalance(account_id: string) {}
@@ -28,6 +36,4 @@ export class TransactionsService {
     });
   }
   addTransaction(account_id: number, amount: number, balance: number) {}
-
-  constructor() {}
 }
