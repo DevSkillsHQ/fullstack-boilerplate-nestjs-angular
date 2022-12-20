@@ -10,6 +10,7 @@ import { CreateTransactionComponent } from './create-transaction/create-transact
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { TransactionsService } from './transactions.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { TransactionsService } from './transactions.service';
     ItemComponent,
     CreateTransactionComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [TransactionsService],
   bootstrap: [AppComponent],
 })
