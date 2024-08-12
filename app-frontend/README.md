@@ -1,6 +1,6 @@
-# Frontend Boilerplate
+# Frontend Boilerplate (Angular)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.5.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.
 
 ## Development server
 
