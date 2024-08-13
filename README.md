@@ -12,8 +12,8 @@ A backbone for your coding challenge.
 
 ### Backend
 
-- NestJS 9.1.7
-- Typescript 4.2.3
+- NestJS
+- Typescript
 
 #### Additional libs
 
@@ -21,8 +21,8 @@ A backbone for your coding challenge.
 
 ### Frontend
 
-- Angular 18
-- Typescript 5
+- Angular
+- Typescript
 
 #### Additional libs
 
