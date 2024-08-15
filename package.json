@@ -12,5 +12,8 @@
   },
   "devDependencies": {
     "cypress": "^12.17.1"
+  },
+  "engines": {
+    "node": ">=18.19.0"
   }
 }
