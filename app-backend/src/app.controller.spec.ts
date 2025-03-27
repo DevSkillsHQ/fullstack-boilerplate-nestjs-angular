@@ -16,7 +16,7 @@ describe('AppController', () => {
 
   describe('root', () => {
     it('should return "pong"', () => {
-      expect(appController.getPing()).toStrictEqual({"result": "pong"});
+      expect(appController.getPing()).toStrictEqual({ result: 'pong' });
     });
   });
 });
