@@ -3,15 +3,43 @@ updates:
   - package-ecosystem: "npm"
     directory: "/app-frontend"
     schedule:
-      interval: "daily"
-    labels:
-      - "npm"
-      - "dependencies"
-
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    groups:
+      angular:
+        patterns:
+          - "@angular/*"
+          - "@angular-devkit/*"
+          - "@schematics/angular"
+          - "zone.js"
+        update-types:
+          - "major"
+      minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"
   - package-ecosystem: "npm"
     directory: "/app-backend"
     schedule:
-      interval: "daily"
-    labels:
-      - "npm"
-      - "dependencies"
+      interval: "weekly"
+    open-pull-requests-limit: 10
+    groups:
+      nestjs:
+        patterns:
+          - "@nestjs/*"
+        update-types:
+          - "major"
+      eslint:
+        patterns:
+          - "eslint"
+          - "@eslint/*"
+          - "eslint-*"
+          - "typescript-eslint"
+          - "@typescript-eslint/*"
+          - "globals"
+        update-types:
+          - "major"
+      minor-and-patch:
+        update-types:
+          - "minor"
+          - "patch"
